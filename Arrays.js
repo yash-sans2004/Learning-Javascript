@@ -45,19 +45,40 @@
 // console.log(m)
 
 // Loops in Arrays
-let num = [2,4,5,6,7,8] // Classical Loop
-for(let i=0; i<num.length; i++){
-    console.log(num[i])
-}
+// let num = [2,4,5,6,7,8] // Classical Loop
+// for(let i=0; i<num.length; i++){
+//     console.log(num[i])
+// }
 
-num.forEach((Element) =>{ // For each loop
-    console.log(Element * Element)
+// num.forEach((Element) =>{ // For each loop
+//     console.log(Element * Element)
+// })
+
+// let str = "YashPurwar" // Array from loop, which is used to convert a string into a array and print the elements by using loop
+// let arr = Array.from(str)
+// console.log(arr)
+
+// for(let i of num){  // For .... of Loop
+//     console.log(i)
+// }
+
+// Array Map Method (This function does not change the original array)
+let arr = [23,45,67,89]
+let a = arr.map((value, index, array)=>{ // It return a array
+    console.log(value, index, array)
+    return value+1;
 })
 
-let str = "YashPurwar" // Array from loop, which is used to convert a string into a array and print the elements by using loop
-let arr = Array.from(str)
-console.log(arr)
+// Array filter method
+let a2 = arr.filter((value)=>{ // It returns a array    
+    return value<50 
+})
 
-for(let i of num){  // For .... of Loop
-    console.log(i)
-}
+// Array Reduce Method
+let a3 = arr.reduce((h1, h2)=>{ // It returns a value
+    return h1 + h2
+})
+
+console.log(a)
+console.log(a2)
+console.log(a3)
